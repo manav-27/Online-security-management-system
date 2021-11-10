@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+    <link rel="stylesheet" href="{% static 'holi_app_style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>approval or denial</title>
+</head>
+<body>
+    <h1>Holiday Aprroval or Denial Form</h1>
+    <form action="holi_app" method="post">
+    {% csrf_token %}
+    <label><b>Username of Guard</b></label><br>
+    <input type="text" id="username" name="username">
+    <br>
+    <br>
+    <label><b>Holiday approved or denied</b></label><br>
+    <input type="text" id="appden" name="appden" placeholder="Type only 'Approved' or 'Denied'">
+    <br><br>
+    <label><b>Message</b></label><br>
+    <input type="text" id="msg" name="msg">
+    <br><br>
+    <button type="submit">SUBMIT</button>
+    </form>
+</body>
+</html>

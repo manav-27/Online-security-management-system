@@ -1,0 +1,91 @@
+
+body{
+    background-image: url('image6.png');
+    background-size: cover;
+}
+h4{
+    font-family: sans-serif;
+    font-size: 26px;
+    color: rgb(0, 0, 165);
+}
+a{
+    width: 300px;  
+    height: 30px;  
+    color:red;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: white;
+    border-radius: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.schedule{
+    width: 100%;  
+    height: 300px;  
+    color:rgb(29, 27, 27);
+    font-family: serif;
+    font-weight: bold;
+    font-size: 20px;
+   background-color:white;
+ 
+    border-radius: 6px;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+.table{
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+.table tr {
+        background-color: #009879;
+
+        text-align: left;
+    }
+    .table th{
+        padding: 12px 15px;
+        color:rgb(30, 30, 63)
+    }
+    .table td {
+        padding: 12px 15px;
+        color:chartreuse
+    }
+    .table tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    .table tr:nth-of-type(even) {
+        background-color: #f74c4c;
+    }
+    
+    .table tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+.note{
+    width: 100%;  
+    height: 500px;  
+    color:rgb(29, 27, 27);
+    font-family: serif;
+    font-weight: bold;
+    font-size: 20px;
+   background-color:rgb(192, 171, 171);
+ 
+    border-radius: 6px;
+    padding-right: 4px;
+    padding-left: 4px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    align-content: center;
+    
+}
+p{
+    color:red
+}

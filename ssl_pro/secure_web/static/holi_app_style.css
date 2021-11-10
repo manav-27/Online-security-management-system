@@ -1,0 +1,66 @@
+body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:#6abadeba;  
+    font-family: 'Arial';  
+}  
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 382px;  
+        overflow: hidden;  
+        margin:auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #23463f;  
+        border-radius: 15px ;  
+}
+#username{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+    padding-bottom: 4px;
+}  
+#appden{
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+    padding-top: 4px;
+}
+#msg{
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+    padding-top: 4px;
+}
+
+button{
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;
+    font-family: serif;
+    font-weight: bold;
+    font-size: large;
+}
+label{  
+    color: #08ffd1;  
+    font-size: 17px;  
+}  
+
+h1{
+    text-align: center;
+    font-family: cursive;
+    color:crimson
+}

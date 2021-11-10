@@ -1,0 +1,16 @@
+footer a {
+    padding-top: 50%;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: white;
+}
+body
+{
+    background-image: url('image3.jpg');
+    height: 100%;
+
+    opacity:50%;
+}
+

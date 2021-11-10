@@ -1,0 +1,43 @@
+<body>
+{% load static %}
+<link rel="stylesheet" href="{% static 'manager_style.css' %}">
+<div class="sch">
+<ul>
+<h4>Steps to change schedule</h4>
+<li>First click on the "Click here below"</li>
+<li>Then select the Guard with its ID whose schedule you want to change</li>
+<li>After changing click on bottom right to save changes</li>
+</ul>
+<h4>To change and edit schedule</h4>
+<a href="http://localhost:8000/admin/secure_web/tt/">Click Here</a>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="pend">
+<h4>Pending request</h4>
+{% for i in gd %}
+
+<ul>
+{% if i.requestst == 1 %}
+<li>Request for user {{i.user.username}} for the date {{i.date}} is pending
+<br>
+{{i.requestmsg}}
+ </li>
+ {% endif %}
+</ul>
+{% endfor %}
+
+<h4 style= "color:red ; font-size:18px">**** Please note the Guard ID you need them in next page to approve or deny ****</h4>
+</div>
+<div class="id">
+<h4>To take action on these pending request</h4>
+<a href="{% url 'holi_app' %}">Click Here</a>
+<a href="{%url 'user_logout'%}">Click here to log out</a>
+</div></body>

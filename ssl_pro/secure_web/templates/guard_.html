@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'guard_style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guard Page</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+<h4>Hello Guard number {{username}}</h4>
+
+<a href="{%url 'user_logout'%}">Click here to log out</a>
+    <br>
+    <br>
+    <div class="schedule">
+        <img src="{% static 'image8.jpg' %}" align="right"  width="350" height="300" background-color="rgb(236, 223, 206)">
+    <h2 style="text-align: center"><u>Schedule</u></h2>
+    <br>
+    <br>
+
+    <table class="table" border="1">
+    <tr>
+        
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th></tr>
+    {% for i in TT %}
+    {% if i.user.username == username %}
+    <tr>
+    <td>{{i.mon}}</td>
+    <td>{{i.tue}}</td>
+    <td>{{i.wed}}</td>
+    <td>{{i.thu}}</td>
+    <td>{{i.fri}}</td>
+    <td>{{i.sat}}</td>
+    <td>{{i.sun}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+    </table>
+</div>
+<div class="note">
+    <h3 style="color:black; font-size:28px" >**************Note*************</h3>
+    <ul>    
+    <h5>Time Code</h5>
+    <ul>
+    <li>1 :- 8:00-16:00</li>
+    <li>2 :- 16:00-00:00</li>
+    <li>3 :- 00:00-8:00</li></ul>
+    </ul>
+    <ul>
+    <h5>Gate Code</h5>
+    <ul>
+    <li>A gate:- Main entrance</li>
+    <li>B gate:- Back entrance</li>
+    <li>C gate:- Hostel entrance</li>
+</ul>
+</ul>
+    <p>****If schedule has for example '3A' this means that guard ID 3 has duty at gate A****
+    </p> 
+
+    
+   	<a class="btn btn-info"  href="{% url 'holi_req' %}">Apply for holiday/overtime</a>
+    {% endif %}
+</div>
+</body>
+</html>

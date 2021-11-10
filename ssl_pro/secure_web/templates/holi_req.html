@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{%load static%}
+    <link rel="stylesheet" href="{% static 'holi_req_style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>holi_req</title>
+</head>
+<body>
+<a href="{%url 'user_logout'%}">Click here to log out</a>
+    {% if me2.requestst == 1%}
+    <h2>You already have request pending can't make more for date {{me2.date}} so please wait for it to get approved/denied first</h2>
+    <h5>Your current salary with taken holidays is:-{{salary}}</h5>
+    {% else %}
+    <h4>your remaining holidays without salary cut is {{me2.AllowedHolidays}}</h4>
+    <h5>Your current salary with taken holidays is:-</h5><h5>{{salary}}</h5>
+    <form action="/holi_req" method="post">
+    {% csrf_token %}
+    <label>write a valid reason and number of holidays here</label><br>
+    <input type="text" id="msg" name="msg" placeholder="write a valid reason and numer of holidays here">
+    <br><br>
+    <label>Date</label>
+    <br>
+    <input type="text" id="datee" name="datee" placeholder="DD/MM">
+    <br><br>
+    <button type="submit">SUBMIT</button>
+    </form>
+    {% endif %} 
+    <a href="{%url 'user_logout'%}">Click here to log out</a>
+    <h3>Your last request dated {{me2.date}} is {{me2.requestdone}} with this note from manager :-{{me2.manno}}</h3>
+</body>
+</html>
